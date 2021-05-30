@@ -14,7 +14,7 @@
         name: spasmojo.webapp.nginx
     - name: "Run webapp role from collection"
       import_role:
-        name: spasmojo.webapp.webapp  
+        name: spasmojo.webapp.webapp
       vars:
         target_dir: "{%- if ansible_distribution == 'CentOS' -%}/usr/share/nginx/html{%- elif ansible_distribution == 'Ubuntu' -%}/var/www/html{%- endif %}"
 
